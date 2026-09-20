@@ -1,3 +1,23 @@
+'''Number Analyzer
+
+User se n input lo.
+
+1 se n tak loop chalao aur calculate karo:
+
+Even numbers ka sum
+Odd numbers ka sum
+Even numbers ka count
+Odd numbers ka count
+Numbers divisible by 3 ka count
+
+Example n = 10:
+
+Even Sum: 30
+Odd Sum: 25
+Even Count: 5
+Odd Count: 5
+Divisible by 3 Count: 3'''
+
 user = int(input("Enter the number: "))
 evencount = 0
 oddcount = 0
