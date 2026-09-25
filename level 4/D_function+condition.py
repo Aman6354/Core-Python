@@ -33,14 +33,31 @@ return abhi use mat karo
 Kam se kam 4 different numbers test karo, including 0.'''
 
 def check_number(number):
-    if number >= 1:
-        print("positive")
+    if number > 0:
+         return "positive"
     elif number  < 0:
-        print("negative")
+        return "negative"
     else:
-        print("zero")
+        return "zero"
+
+       
 
 result = check_number(6745)
 result2 = check_number(745)
 result3 = check_number(-4345)
 result4 = check_number(0)
+
+print(result)
+print(result2)
+print(result3)
+print(result4)
+
+
+
+
+
+
+
+
+
+
