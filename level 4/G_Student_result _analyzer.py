@@ -1,3 +1,44 @@
+'''Student Result Analyzer
+
+Function banao:
+
+student_result(name, marks)
+
+Function ko name aur marks milenge.
+
+Function ke andar:
+
+Marks ke basis par grade determine karo:
+
+Marks	Grade
+90–100	A
+75–89	B
+60–74	C
+40–59	D
+Below 40	F
+
+Phir function ko name + grade return karna hai.
+
+Example:
+
+result = student_result("Aman", 82)
+print(result)
+
+Expected:
+
+Aman B
+Rules 🔥
+Function compulsory
+2 parameters
+if / elif / else
+return compulsory
+input() nahi
+Function ko at least 4 students ke saath test karo
+Marks 0–100 ke andar hi rakho'''
+
+
+
+
 def student_result(name,marks):
         if marks >= 90 and marks <= 100:
             return name,'A'
