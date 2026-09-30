@@ -18,6 +18,19 @@ def apply_discount(total):
 def final_bill(total_after_discount):
     tax = total_after_discount * 0.18
     final_bill = total_after_discount + tax
+
+    return final_bill()
+
+def process_order():
+    total = calculate_total(price,quantity)
+    apply_discount = calculate_total(price,quantity)
+    something something
+    what update do u have ANYSECNE U S == 
+    JFFUI IHDFB OIHV
     
 
-    return = final_bill
+
+      
+    
+
+    
