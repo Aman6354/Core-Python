@@ -40,5 +40,12 @@ def process_account(action, amount = 0):
         return check_balance()
     else:
         return "Invalid Action"
-   
+
+
+print(process_account("deposit",1000))
+print(process_account("withdraw",510))
+print(process_account("check_balance"))
+print(process_account("deposit",1000))
+print(process_account("withdraw",200))
+print(process_account("hello"))   jai shree ram
    
