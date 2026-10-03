@@ -7,26 +7,24 @@ def deposit(amount):
     if amount > 0:
         privious_balance += amount
         deposite = privious_balance
-        return "New Balance: ",deposit 
+        return "current Balance: ",deposit 
     else:
-        privious_balance += amount
         deposit = privious_balance
-        return "Unchanged Balance: ",deposit
+        return "current Balance: ",deposit
 
 def withdraw(amount):
     global privious_balance
 
-    if amount >= 0:
+    if 0 > amount >= privious_balance:
         privious_balance -= amount
         withdraw = privious_balance
-        return "New Balance",withdraw
+        return "your current Balance is: ",withdraw
     else:
         withdraw = privious_balance
-        return "New Balance",withdraw
+        return "current Balance",withdraw
 
 def check_balance():
-    global privious_balance
-
+    global privious_balancen ra radh
     balance = privious_balance
     return "Current Balance",balance
 
