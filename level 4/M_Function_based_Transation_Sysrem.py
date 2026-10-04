@@ -1,49 +1,106 @@
+'''Challenge 14 — Function-Based Transaction System
 
-privious_balance = 0
+Ab repetitive grade/discount/loan type questions se ek level upar.
 
-def deposit(amount):
-    global privious_balance
+Tumhe 3 functions + 1 controller function banana hai.
 
+Functions
+deposit(balance, amount)
+withdraw(balance, amount)
+check_balance(balance)
+process_account(balance, action, amount)
+Rules
+
+deposit()
+
+amount > 0 → new balance return
+otherwise → balance unchanged
+
+withdraw()
+
+amount > 0 AND amount <= balance → new balance return
+insufficient balance → balance unchanged
+
+check_balance()
+
+current balance return kare
+
+process_account()
+
+action == "deposit" → deposit() call
+action == "withdraw" → withdraw() call
+action == "balance" → check_balance() call
+koi unknown action → "Invalid Action" return
+Test
+
+At least 6 transactions karo, for example:
+
+Starting balance = 10000
+
+deposit
+withdraw
+withdraw
+balance
+deposit
+unknown action
+Important
+
+Is challenge mein main dekhunga ki tum:
+
+input → controller → correct function → return value
+
+ka flow independently handle kar pa rahe ho ya nahi.'''
+
+
+def deposit(balance, amount):
     if amount > 0:
-        privious_balance += amount
-        deposite = privious_balance
-        return "current Balance: ",deposit 
-    else:
-        deposit = privious_balance
-        return "current Balance: ",deposit
+        balance += amount
 
-def withdraw(amount):
-    global privious_balance
+    return balance
 
-    if 0 > amount >= privious_balance:
-        privious_balance -= amount
-        withdraw = privious_balance
-        return "your current Balance is: ",withdraw
-    else:
-        withdraw = privious_balance
-        return "current Balance",withdraw
 
-def check_balance():
-    global privious_balancen ra radh
-    balance = privious_balance
-    return "Current Balance",balance
+def withdraw(balance, amount):
+    if amount > 0 and amount <= balance:
+        balance -= amount
 
-def process_account(action, amount = 0):
+    return balance
+
+
+def check_balance(balance):
+    return balance
+
+
+def process_account(balance, action, amount=0):
 
     if action == "deposit":
-        return deposit(amount)
+        return deposit(balance, amount)
+
     elif action == "withdraw":
-        return withdraw(amount)
-    elif action == "check_balance":
-        return check_balance()
+        return withdraw(balance, amount)
+
+    elif action == "balance":
+        return check_balance(balance)
+
     else:
-        return "Invalid Action"
+        return balance
 
 
-print(process_account(deposit,1000))
-print(process_account(withdraw,510))
-print(process_account(check_balance))
-print(process_account(deposit,1000))
-print(process_account(withdraw,200))
-print(process_account("hello"))   
-   
+balance = 10000
+
+balance = process_account(balance, "deposit", 5000)
+print("Balance:", balance)
+
+balance = process_account(balance, "withdraw", 2000)
+print("Balance:", balance)
+
+balance = process_account(balance, "withdraw", 3000)
+print("Balance:", balance)
+
+balance = process_account(balance, "withdraw", 20000)
+print("Balance:", balance)
+
+balance = process_account(balance, "balance")
+print("Balance:", balance)
+
+balance = process_account(balance, "hello", 500)
+print("Balance:", balance)
