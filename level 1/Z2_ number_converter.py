@@ -1,3 +1,5 @@
+# python program to convert into decimal number system
+
 s1 = "17"
 s2 = "1110010"
 s3 = "1c2"
