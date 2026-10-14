@@ -1,1 +1,2 @@
-print("printing practice ṇ")
+name = "Raghav chaudhary"
+print(type(name)), print(name)
