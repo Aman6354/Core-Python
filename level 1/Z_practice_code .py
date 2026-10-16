@@ -1,2 +1,2 @@
-name = "Raghav chaudhary"
+name = "vimal"
 print(type(name)), print(name)
