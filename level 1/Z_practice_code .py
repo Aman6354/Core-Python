@@ -1,3 +1,4 @@
-name = "vimal"
-print(type(name)), print(name)
-print("All the required requiseted skills i havee")
+# accepting a single character from keyboard
+
+ch = input("Enter a char: ")
+print("u entered: "+ch[0])
