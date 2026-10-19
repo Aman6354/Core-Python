@@ -2,4 +2,4 @@
 
 ch = input("Enter a char: ")
 print("u entered: "+ch[0])
-print("This comment is just for maintaining the streak ")
+print("This comment is just for maintaining the streak, now doing something stange so that my sreak loog darker ")
